@@ -15,10 +15,11 @@ public class Main {
         Double altura = scanner.nextDouble();
 
         Double IMC = peso/ (altura*altura);
-        System.out.println("O IMC eh: " + IMC);
+        String resultado = String.format("%.2f", IMC);
+
+        System.out.println("O IMC eh: " + resultado);
 
         verifica.intervalos(IMC);
-
         scanner.close();
     }
 }
