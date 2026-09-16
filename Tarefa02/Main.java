@@ -16,7 +16,7 @@ public class Main {
         System.out.print("Saldo: ");
         conta1.setSaldo(teclado.nextDouble());
 
-        System.out.print("Especial: (true, false)");
+        System.out.print("Especial: (true, false): ");
         conta1.setEspecial(teclado.nextBoolean());
         teclado.nextLine();
 
@@ -28,42 +28,36 @@ public class Main {
         System.out.print("Saldo: ");
         conta2.setSaldo(teclado.nextDouble());
 
-        System.out.print("Especial: (true, false)");
+        System.out.print("Especial: (true, false): ");
         conta2.setEspecial(teclado.nextBoolean());
         teclado.nextLine();
 
-  /*       // Venda válida de uma unidade do primeiro produto
-        double totalVenda1 = conta1.efetuarVenda(1);
+        double quanto;
 
-        if (totalVenda1 > 0)
-            System.out.printf("%nVenda realizada. Total: R$ %.2f%n", totalVenda1);
-        else
-            System.out.println("\nNão foi possível realizar a venda.");
+        System.out.println("- Depósito -");
+        System.out.print("Quanto vai depositar (conta 1): ");
+        quanto = (teclado.nextDouble());
+        
+        conta1.depositarValor(quanto);
+        conta1.print();
+        conta2.print();
 
+        System.out.println("- Retirada -");
+        System.out.print("Quanto vai retirar (conta 2): ");
+        quanto = (teclado.nextDouble());
+        
+        conta2.retirarValor(quanto);
+        conta1.print();
+        conta2.print();
 
-        // Tentativa de venda com estoque insuficiente
-        int quantidade = conta2.getEstoque() + 1;
-        double totalVenda2 = conta2.efetuarVenda(quantidade);
+        System.out.println("- Transferir valor entre contas -");
+        System.out.print("Quanto deseja transferir: ");
+        quanto = (teclado.nextDouble());
+        
+        conta1.transferirValor(quanto, conta2);
 
-        if (totalVenda2 > 0)
-            System.out.printf("Venda realizada. Total: R$ %.2f%n", totalVenda2);
-        else
-            System.out.println("Venda não realizada: estoque insuficiente."); */
-
-        conta1.depositarValor(200);
-        conta2.depositarValor
-
-        System.out.println("\nSituação dos produtos:");
-
-        System.out.printf("%s | Saldo: R$ %.2f | Especial: %b%n",
-                conta1.getNome(),
-                conta1.getSaldo(),
-                conta1.getEspecial());
-
-        System.out.printf("%s | Saldo: R$ %.2f | Especial: %d%n",
-                conta2.getNome(),
-                conta2.getSaldo(),
-                conta2.getEspecial());
+        conta1.print(); 
+        conta2.print();
 
         teclado.close();
     }
