@@ -15,8 +15,10 @@ public class Fila {
     public int saiFila(){
         if (fila.size() > 0){
             fila.remove(0);
-            inicio = fila.get(0);
-            fim = fila.get(fila.size()-1);
+            if (fila.size() > 0){
+                inicio = fila.get(0);
+                fim = fila.get(fila.size()-1);
+            }
             return 0;
         } 
         else{
