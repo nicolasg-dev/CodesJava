@@ -6,6 +6,6 @@ public class Organizador extends Participante {
 
     @Override
     public String getCertificado() {
-        return super.getCertificado() + "atuando como organizador do evento." + "\n";
+        return super.getCertificado() + " atuando como organizador do evento.\n";
     }
 }

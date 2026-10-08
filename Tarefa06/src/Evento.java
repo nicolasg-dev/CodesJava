@@ -29,7 +29,7 @@ public class Evento {
         return certificados;
     }
     public static void main (String args[]) {
-        Evento evento = new Evento("TechWeek", 4);
+        Evento evento = new Evento("TechWeek", 6);
         Palestrante p1 = new Palestrante("Homem de Ferro", evento, "Guerra Infinita Reloaded.");
         Palestrante p2 = new Palestrante("Thanos", evento, "Eu não morri!");
         Ouvinte o1 = new Ouvinte("Marcelo", evento);
