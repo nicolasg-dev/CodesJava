@@ -6,6 +6,6 @@ public class Voluntario extends Participante {
 
     @Override
     public String getCertificado() {
-        return super.getCertificado() + " atuando como o cargo de voluntário no evento.\n";
+        return super.getCertificado() + " atuando como voluntário do evento.\n";
     }
 }
