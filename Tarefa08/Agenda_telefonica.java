@@ -25,7 +25,7 @@ public class Agenda_telefonica {
     ArrayList<Contato> cadastrados = new ArrayList<>();//Array de cadastrados
 
     public Agenda_telefonica() {
-        janela.setSize(300,400);
+        janela.setSize(300,150);
         campoNome.setText("");
         campoTelefone.setText("");
         campoEndereco.setText("");
